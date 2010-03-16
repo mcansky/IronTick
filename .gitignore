@@ -2,3 +2,4 @@ log/*
 db/*
 config/database.yml
 *~
+vendor/bundled_gems/*
