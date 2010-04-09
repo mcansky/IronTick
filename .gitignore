@@ -3,3 +3,5 @@ db/*
 config/database.yml
 *~
 vendor/bundled_gems/*
+.DS_Store
+*/.DS_Store
