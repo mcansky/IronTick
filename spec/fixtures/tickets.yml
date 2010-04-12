@@ -1,0 +1,15 @@
+one:
+  title: MyString
+  status: MyString
+  text: MyText
+  owner_id: 1
+  project_id: 1
+  customer_id: 1
+
+two:
+  title: MyString
+  status: MyString
+  text: MyText
+  owner_id: 1
+  project_id: 1
+  customer_id: 1
