@@ -40,16 +40,27 @@ Then /^he should have a phone number$/ do
 end
 
 # association check
-Given /^a user, and company$/ do
+Given /^a user, two tickets and company$/ do
   @user = Factory.create(:user)
   @company = Factory.create(:company)
 end
 
-When /^I set the user company with the company$/ do
+When /^I associate the user with those objets$/ do
   @user.company = @company
+  @user.managed_tickets << @managed_T
+  @user.owned_tickets << @ticket
 end
 
 Then /^the user should belongs to the company$/ do
   @user.company.should == @company
 end
+
+Then /^the user should manage tickets$/ do
+  @user.managed_tickets.size.should > 0
+end
+
+Then /^the user should own tickets$/ do
+  @user.owned_tickets.size.should > 0
+end
+
 
