@@ -9,8 +9,8 @@ Scenario: check basic ticket things
 	And it should have a text
 
 Scenario: check associations
-	Given a ticket, a user and a project
-	When I add the ticket to the user and the project
-	Then the ticket should have an owner
+	Given a ticket, a manager, a customer and a project
+	When I add the ticket to the customer, manager and the project
+	Then the ticket should have a manager
 	And the ticket should have a project
 	And the ticket should have a customer

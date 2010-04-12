@@ -33,3 +33,29 @@ end
 Then /^it should have a customer$/ do
   @ticket.customer.should_not == nil
 end
+
+# associations check
+Given /^a ticket, a manager, a customer and a project$/ do
+  @ticket = Factory.create(:ticket)
+  @user = Factory.create(:user)
+  @admin = Factory.create(:admin)
+  @project = Factory.create(:project)
+end
+
+When /^I add the ticket to the customer, manager and the project$/ do
+  @admin.managed_tickets << @ticket
+  @project.tickets << @ticket
+  @user.tickets << @ticket
+end
+
+Then /^the ticket should have a manager$/ do
+  @ticket.manager.should == @admin
+end
+
+Then /^the ticket should have a project$/ do
+  @ticket.project.should == @project
+end
+
+Then /^the ticket should have a customer$/ do
+  @ticket.customer.should == @user
+end
