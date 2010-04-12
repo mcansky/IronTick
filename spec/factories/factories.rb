@@ -8,6 +8,14 @@ Factory.define :user do |u|
   u.phone '0601023454'
 end
 
+Factory.define :admin, :class => User do |u|
+  u.login 'admin'
+  u.email 'admin@fzefze.fr'
+  u.firstname 'ad'
+  u.lastname 'min'
+  u.phone '0601023454'
+end
+
 Factory.define :company do |c|
   c.name 'bob corp'
   c.description "acdze zefqze zef"
