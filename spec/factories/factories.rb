@@ -19,3 +19,8 @@ Factory.define :ticket do |t|
   t.status 'open'
   t.text "dezsce feirzoh zefcze zec qzec z"
 end
+
+Factory.define :project do |p|
+  p.name 'deze'
+  p.description "acezq cezconqzevc"
+end
