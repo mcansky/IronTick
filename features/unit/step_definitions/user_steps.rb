@@ -3,7 +3,8 @@ Given /^a user "([^\"]*)"$/ do |arg1|
 end
 
 When /^we get it$/ do
-  @user = User.find_by_login("bob")
+  @user = Factory.build(:user)
+  @user.should_not == nil
 end
 
 Then /^he should have a login$/ do
