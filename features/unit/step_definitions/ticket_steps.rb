@@ -1,31 +1,35 @@
 Given /^a ticket$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket = Factory.build(:ticket)
+end
+
+When /^I check it out$/ do
+  @ticket.should_not == nil
 end
 
 Then /^it should have a title$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.title.should_not == nil
 end
 
 Then /^it should have a creation date$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.creation_date.should_not == nil
 end
 
 Then /^it should have a status$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.status.should_not == nil
 end
 
 Then /^it should have a text$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.text.should_not == nil
 end
 
 Then /^it should have an owner$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.owner.should_not == nil
 end
 
 Then /^it should have a project$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.project.should_not == nil
 end
 
 Then /^it should have a customer$/ do
-  pending # express the regexp above with the code you wish you had
+  @ticket.customer.should_not == nil
 end
