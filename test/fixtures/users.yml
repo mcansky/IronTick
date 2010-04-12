@@ -1,0 +1,11 @@
+one:
+  login: MyString
+  email: MyString
+  phone: MyString
+  company_id: 1
+
+two:
+  login: MyString
+  email: MyString
+  phone: MyString
+  company_id: 1
