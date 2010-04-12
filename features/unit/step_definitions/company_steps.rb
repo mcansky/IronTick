@@ -1,23 +1,23 @@
 Given /^a company$/ do
-  pending # express the regexp above with the code you wish you had
+  @company = Factory.build(:company)
 end
 
 When /^I check it out$/ do
-  pending # express the regexp above with the code you wish you had
+  @company.should_not == nil
 end
 
 Then /^it should have a name$/ do
-  pending # express the regexp above with the code you wish you had
+  @company.name.should_not == nil
 end
 
 Then /^it should have an address$/ do
-  pending # express the regexp above with the code you wish you had
+  @company.address.should_not == nil
 end
 
 Then /^it should have users$/ do
-  pending # express the regexp above with the code you wish you had
+  @company.users.should_not == nil
 end
 
 Then /^it should have projects$/ do
-  pending # express the regexp above with the code you wish you had
+  @company.projects.should_not
 end
