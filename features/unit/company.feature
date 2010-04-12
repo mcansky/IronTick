@@ -5,5 +5,9 @@ Scenario: check a company basic attributes
 	When we build it
 	Then it should have a name
 	And it should have an address
-	And it should have users
-	And it should have projects
+
+Scenario: check company associations
+	Given a company, a user and a project
+	When I set those associations
+	Then the company should have users
+	And the company should have projects
