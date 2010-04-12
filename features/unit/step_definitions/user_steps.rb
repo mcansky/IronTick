@@ -1,19 +1,19 @@
 Given /^a user$/ do
-  pending # express the regexp above with the code you wish you had
+  @user = User.find(:first)
 end
 
 Then /^he should have a login$/ do
-  pending # express the regexp above with the code you wish you had
+  @user.login.should_not == nil
 end
 
 Then /^he should have an email$/ do
-  pending # express the regexp above with the code you wish you had
+  @user.email.should_not == nil
 end
 
 Then /^he should have a phone number$/ do
-  pending # express the regexp above with the code you wish you had
+  @user.phone.should_not == nil
 end
 
 Then /^he should belongs to a company$/ do
-  pending # express the regexp above with the code you wish you had
+  @user.company.should_not == nil
 end
