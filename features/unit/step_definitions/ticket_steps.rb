@@ -1,5 +1,5 @@
 Given /^a ticket$/ do
-  @ticket = Factory.build(:ticket)
+  @ticket = Factory.create(:ticket)
 end
 
 When /^I check it out$/ do
@@ -11,7 +11,7 @@ Then /^it should have a title$/ do
 end
 
 Then /^it should have a creation date$/ do
-  @ticket.creation_date.should_not == nil
+  @ticket.created_at.should_not == nil
 end
 
 Then /^it should have a status$/ do

@@ -16,7 +16,6 @@ end
 
 Factory.define :ticket do |t|
   t.title 'error EZD'
-  t.creation_date Time.now
   t.status 'open'
   t.text "dezsce feirzoh zefcze zec qzec z"
 end
