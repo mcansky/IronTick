@@ -7,3 +7,9 @@ Factory.define :user do |u|
   u.lastname 'bobson'
   u.phone '0601023454'
 end
+
+Factory.define :company do |c|
+  c.name 'bob corp'
+  c.description "acdze zefqze zef"
+  c.address "adz zadazd ezfze"
+end
