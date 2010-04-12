@@ -39,6 +39,17 @@ Then /^he should have a phone number$/ do
   @user.phone.should_not == nil
 end
 
-Then /^he should belongs to a company$/ do
-  @user.company.should_not == nil
+# association check
+Given /^a user, and company$/ do
+  @user = Factory.create(:user)
+  @company = Factory.create(:company)
 end
+
+When /^I set the user company with the company$/ do
+  @user.company = @company
+end
+
+Then /^the user should belongs to the company$/ do
+  @user.company.should == @company
+end
+

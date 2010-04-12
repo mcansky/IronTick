@@ -1,6 +1,6 @@
 In order to handle customers and admins
 
-Scenario: check basic users things
+Scenario: check basic user attributes
 	Given a user "bob"
 	When we get it
 	Then he should have a login
@@ -11,4 +11,8 @@ Scenario: check basic users things
 	And he should have a password_salt
 	And he should have a persistence_token
 	And he should have a phone number
-	And he should belongs to a company
+
+Scenario: check user associations
+	Given a user, and company
+	When I set the user company with the company
+	Then the user should belongs to the company
