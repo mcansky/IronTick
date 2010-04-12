@@ -20,7 +20,7 @@ Factory.define :ticket do |t|
   t.text "dezsce feirzoh zefcze zec qzec z"
 end
 
-Factory.define :project do |p|
-  p.name 'deze'
-  p.description "acezq cezconqzevc"
+Factory.define :project do |pr|
+  pr.name 'deze'
+  pr.description "acezq cezconqzevc"
 end

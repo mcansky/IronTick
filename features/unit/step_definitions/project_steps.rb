@@ -6,6 +6,10 @@ When /^we load it$/ do
   @project.should_not == nil
 end
 
+Then /^it should have a not empty name$/ do
+  @project.name.should_not == nil
+end
+
 Then /^it should have a description$/ do
   @project.description.should_not == nil
 end
