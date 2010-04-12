@@ -43,9 +43,9 @@ Given /^a ticket, a manager, a customer and a project$/ do
 end
 
 When /^I add the ticket to the customer, manager and the project$/ do
-  @admin.managed_tickets << @ticket
-  @project.tickets << @ticket
-  @user.tickets << @ticket
+  @ticket.manager = @admin
+  @ticket.project = @project
+  @ticket.customer = @user
 end
 
 Then /^the ticket should have a manager$/ do
