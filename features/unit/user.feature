@@ -13,6 +13,8 @@ Scenario: check basic user attributes
 	And he should have a phone number
 
 Scenario: check user associations
-	Given a user, and company
-	When I set the user company with the company
+	Given a user, two tickets and company
+	When I associate the user with those objets
 	Then the user should belongs to the company
+	And the user should manage tickets
+	And the user should own tickets
