@@ -43,6 +43,8 @@ end
 Given /^a user, two tickets and company$/ do
   @user = Factory.create(:user)
   @company = Factory.create(:company)
+  @ticket = Factory.create(:ticket)
+  @managed_T = Factory.create(:managed)
 end
 
 When /^I associate the user with those objets$/ do
