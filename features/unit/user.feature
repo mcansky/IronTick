@@ -7,5 +7,8 @@ Scenario: check basic users things
 	And he should have an email
 	And he should have a lastname
 	And he should have a firstname
+	And he should have a crypted_password
+	And he should have a password_salt
+	And he should have a persistence_token
 	And he should have a phone number
 	And he should belongs to a company
