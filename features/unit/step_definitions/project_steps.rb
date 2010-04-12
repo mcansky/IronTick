@@ -2,6 +2,10 @@ Given /^a project$/ do
   pending # express the regexp above with the code you wish you had
 end
 
+When /^we load it$/ do
+  pending
+end
+
 Then /^it should have a description$/ do
   pending # express the regexp above with the code you wish you had
 end
