@@ -1,9 +1,21 @@
-Given /^a user$/ do
-  @user = User.find(:first)
+Given /^a user "([^\"]*)"$/ do |arg1|
+  @user_name = arg1
+end
+
+When /^we get it$/ do
+  @user = User.find_by_login("bob")
 end
 
 Then /^he should have a login$/ do
   @user.login.should_not == nil
+end
+
+Then /^he should have a lastname$/ do
+  @user.lastname.should_not == nil
+end
+
+Then /^he should have a firstname$/ do
+  @user.firstname.should_not == nil
 end
 
 Then /^he should have an email$/ do
