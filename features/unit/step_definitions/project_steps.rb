@@ -23,7 +23,7 @@ end
 
 When /^we set associations$/ do
   @project.tickets << @ticket
-  @project.company << @company
+  @project.company = @company
 end
 
 Then /^the project should have tickets$/ do
