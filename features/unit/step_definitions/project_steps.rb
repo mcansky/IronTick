@@ -14,10 +14,24 @@ Then /^it should have a description$/ do
   @project.description.should_not == nil
 end
 
-Then /^it should have tickets$/ do
-  @project.tickets.should_not == nil
+# association check
+Given /^a project, a ticket, and a company$/ do
+  @project = Factory.build(:project)
+  @ticket = Factory.build(:ticket)
+  @company = Factory.build(:company)
 end
 
-Then /^it should belongs to a company$/ do
-  @project.company.should_not == nil
+When /^we set associations$/ do
+  @project.tickets << @ticket
+  @project.company << @company
 end
+
+Then /^the project should have tickets$/ do
+  @project.tickets.should_not == nil
+  @project.tickets.size.should == 1
+end
+
+Then /^the project should belongs to a company$/ do
+  @project.company.should == @company
+end
+

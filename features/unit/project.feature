@@ -5,5 +5,9 @@ Scenario: we manage tickets by projects and company
 	When we load it
 	Then it should have a not empty name
 	And it should have a description
-	And it should have tickets
-	And it should belongs to a company
+
+Scenario: check project associations
+	Given a project, a ticket, and a company
+	When we set associations
+	Then the project should have tickets
+	And the project should belongs to a company
