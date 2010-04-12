@@ -1,4 +1,4 @@
 namespace :ci do
   desc "CI"
-  task :build => ['db:migrate', 'features']
+  task :build => ['bundle:install', 'db:migrate', 'features']
 end
