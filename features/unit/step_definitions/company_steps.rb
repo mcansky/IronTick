@@ -2,7 +2,7 @@ Given /^a company$/ do
   @company = Factory.build(:company)
 end
 
-When /^I check it out$/ do
+When /^we build it$/ do
   @company.should_not == nil
 end
 
