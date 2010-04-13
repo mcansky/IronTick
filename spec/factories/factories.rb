@@ -8,6 +8,7 @@ Factory.define :user do |u|
   u.phone '0601023454'
   u.role 'customer'
   u.password 'secret'
+  u.password_confirmation 'secret'
 end
 
 Factory.define :admin, :class => User do |u|
@@ -18,6 +19,7 @@ Factory.define :admin, :class => User do |u|
   u.phone '0601023454'
   u.role 'admin'
   u.password 'secret'
+  u.password_confirmation 'secret'
 end
 
 Factory.define :customer, :class => User do |u|
@@ -28,6 +30,7 @@ Factory.define :customer, :class => User do |u|
   u.phone '0601023454'
   u.role 'customer'
   u.password 'secret'
+  u.password_confirmation 'secret'
 end
 
 Factory.define :company do |c|
