@@ -12,7 +12,7 @@ class UserSessionsController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def destroy
     @user_session = UserSession.find(params[:id])
     @user_session.destroy
