@@ -11,6 +11,7 @@ Scenario: check basic user attributes
 	And he should have a password_salt
 	And he should have a persistence_token
 	And he should have a phone number
+	And he should have a role
 
 Scenario: check user associations
 	Given a user, two tickets and company

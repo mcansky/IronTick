@@ -39,6 +39,10 @@ Then /^he should have a phone number$/ do
   @user.phone.should_not == nil
 end
 
+Then /^he should have a role$/ do
+  @user.role.should_not == nil
+end
+
 # association check
 Given /^a user, two tickets and company$/ do
   @user = Factory.create(:user)

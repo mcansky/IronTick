@@ -6,6 +6,7 @@ Factory.define :user do |u|
   u.firstname 'bob'
   u.lastname 'bobson'
   u.phone '0601023454'
+  u.role 'customer'
 end
 
 Factory.define :admin, :class => User do |u|
@@ -14,6 +15,7 @@ Factory.define :admin, :class => User do |u|
   u.firstname 'ad'
   u.lastname 'min'
   u.phone '0601023454'
+  u.role 'admin'
 end
 
 Factory.define :customer, :class => User do |u|
@@ -22,6 +24,7 @@ Factory.define :customer, :class => User do |u|
   u.firstname 'bob'
   u.lastname 'bobson'
   u.phone '0601023454'
+  u.role 'customer'
 end
 
 Factory.define :company do |c|
