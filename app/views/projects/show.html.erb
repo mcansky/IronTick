@@ -7,7 +7,9 @@
 <h2>Last 10 tickets</h2>
 
 <p>
-  <%= link_to "Edit", edit_project_path(@project) %> |
-  <%= link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete %> |
+	<% if current_user.is_admin? %>
+  	<%= link_to "Edit", edit_project_path(@project) %> |
+  	<%= link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete %> |
+	<% end %>
   <%= link_to "View All", projects_path %>
 </p>
