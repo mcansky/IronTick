@@ -1,11 +1,11 @@
 Given /^a customer$/ do
-  pending # express the regexp above with the code you wish you had
+  @customer = Factory.build(:customer)
 end
 
 When /^he logs in$/ do
-  pending # express the regexp above with the code you wish you had
+  visit root_url
 end
 
-Then /^he should see a list of projects$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^he should see "([^\"]*)"$/ do |arg1|
+  response.should contain(arg1)
 end
