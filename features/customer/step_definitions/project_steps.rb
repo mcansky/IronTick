@@ -8,7 +8,7 @@ When /^the customer logs in$/ do
 end
 
 When /^he check a project$/ do
-  visit @project
+  visit url_for(@project)
 end
 
 Then /^he should see the project title within "([^\"]*)"$/ do |arg1|
