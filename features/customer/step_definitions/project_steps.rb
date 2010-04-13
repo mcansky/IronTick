@@ -4,7 +4,10 @@ Given /^a project and customer$/ do
 end
 
 When /^the customer logs in$/ do
-  visit root_url
+  visit login_path
+  fill_in "login", :with => @customer.login
+  fill_in "password", :with => @customer.password
+  click_button "Login"
 end
 
 When /^he check a project$/ do
