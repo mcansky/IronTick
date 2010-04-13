@@ -12,13 +12,13 @@ When /^he check a project$/ do
 end
 
 Then /^he should see the project title within "([^\"]*)"$/ do |arg1|
-  response should contain(@project.name)
+  response.should contain(@project.name)
 end
 
 Then /^he should see the project description within "([^\"]*)"$/ do |arg1|
-  response should contain(@project.description)
+  response.should contain(@project.description)
 end
 
 Then /^he should see "([^\"]*)" within "([^\"]*)"$/ do |arg1, arg2|
-  response should contain(arg1)
+  response.should contain(arg1)
 end
