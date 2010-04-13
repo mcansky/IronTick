@@ -1,7 +1,11 @@
 # some project exist
 Given /^a customer and a project$/ do
-  @customer = Factory.build(:customer)
-  @project = Factory.build(:project)
+  @customer = Factory.create(:customer)
+  @project = Factory.create(:project)
+end
+# no projects yet
+Given /^a customer$/ do
+  @customer = Factory.create(:customer)
 end
 
 When /^he logs in$/ do
@@ -10,9 +14,4 @@ end
 
 Then /^he should see "([^\"]*)"$/ do |arg1|
   response.should contain(arg1)
-end
-
-# no projects yet
-Given /^a customer$/ do
-  @customer = Factory.build(:customer)
 end
