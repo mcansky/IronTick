@@ -1,27 +1,24 @@
 Given /^a project and customer$/ do
-  pending # express the regexp above with the code you wish you had
+  @project = Factory.create(:project)
+  @customer = Factory.create(:customer)
 end
 
 When /^the customer logs in$/ do
-  pending # express the regexp above with the code you wish you had
+  visit root_url
 end
 
 When /^he check a project$/ do
-  pending # express the regexp above with the code you wish you had
+  visit @project
 end
 
-Then /^he should see the project title$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^he should see the project title within "([^\"]*)"$/ do |arg1|
+  response should contain(@project.name)
 end
 
-Then /^he should see the project description$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^he should see the project description within "([^\"]*)"$/ do |arg1|
+  response should contain(@project.description)
 end
 
-Then /^he should see last 10 tickets name$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^he should see last 10 tickets status$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^he should see "([^\"]*)" within "([^\"]*)"$/ do |arg1, arg2|
+  response should contain(arg1)
 end
