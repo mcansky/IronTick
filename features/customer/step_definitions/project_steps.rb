@@ -22,3 +22,8 @@ end
 Then /^he should see "([^\"]*)" within "([^\"]*)"$/ do |arg1, arg2|
   response.should contain(arg1)
 end
+
+Then /^he should not see "([^\"]*)" within "([^\"]*)"$/ do |arg1, arg2|
+  response.should_not contain(arg1)
+end
+

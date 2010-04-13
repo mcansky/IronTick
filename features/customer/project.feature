@@ -7,3 +7,5 @@ Scenario: the customer logs in, check a project
 	Then he should see the project title within "h1"
 	And he should see the project description within "p"
 	And he should see "Last 10 tickets" within "h2"
+	Then he should not see "Edit" within "a"
+	And he should not see "Destroy" within "a"
